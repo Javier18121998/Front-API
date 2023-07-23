@@ -1,9 +1,13 @@
+import React from "react";
+import Login from "./Components/Seguridad/Login";
+
 function App() {
   return (
    <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
           <span>Test Code</span>
-      </header>
+      </header> */}
+      <Login></Login>
    </div>
   );
 }
