@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Productos from "./Components/pantalla/Productos";
 import DetalleProducto from "./Components/pantalla/DetalleProducto";
 import CarritoCompras from "./Components/pantalla/CarritoCompras";
+import ProcesoCompra from "./Components/pantalla/ProcesoCompra";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/" component={Productos}/>
           <Route exact path="/detalleProducto/:id" component={DetalleProducto}/>
           <Route exact path="/carrito" component={CarritoCompras}/>
+          <Route exact path="/procesoCompra" component={ProcesoCompra}/>
         </Switch>
       </Router>
     </ThemeProvider>

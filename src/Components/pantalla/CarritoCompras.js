@@ -3,8 +3,11 @@ import useStyles from "../../theme/useStyles";
 import { Container, Grid, CardMedia, Icon, IconButton, MenuItem, Table, TableBody, TableCell, TableContainer, TableRow, TextField, Typography, Paper, Divider, Button } from "@material-ui/core";
 import { productoArray } from "../data/dataPrueba";
 
-const CarritoCompras = () => {
+const CarritoCompras = (props) => {
     const miArray = productoArray;
+    const realizarCompra = () => {
+        props.history.push("/procesoCompra");
+    }
     const classes = useStyles();
     return (
         <Container className={classes.containermt}>
@@ -72,6 +75,7 @@ const CarritoCompras = () => {
                             variant="contained"
                             color="primary"
                             size="large"
+                            onClick={realizarCompra}
                         >
                             REALIZAR COMPRA
                         </Button>
