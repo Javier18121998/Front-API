@@ -1,36 +1,12 @@
-import {Avatar, Button, Card, Container, Grid, Icon, Link, TextField, Typography, makeStyles} from '@material-ui/core'
+import {Avatar, Button, Card, Container, Grid, Icon, TextField, Typography, makeStyles} from '@material-ui/core'
 import React from "react";
-const useStyles = makeStyles({
-    containermt: {
-        marginTop: 30
-    },
-    card: {
-        padding: 30
-    },
-    avatar: {
-        backgroundColor: '#3a0ca3',
-        width: 80,
-        height: 80
-    },
-    icon: {
-        fontSize: 60
-    },
-    form: {
-        marginTop: 40,
-        marginBottom: 10
-    },
-    gridmb: {
-        marginBottom: 20
-    },
-    link: {
-        marginTop: 8
-    }
-})
+import useStyles from '../../theme/useStyles';
+import { Link } from 'react-router-dom';
 const Login = () =>{
     const classes = useStyles();
     return(
         <Container className={classes.containermt}>
-            <Grid container justify="center">
+            <Grid container justifyContent="center">
                 <Grid item lg={5} md={6}>
                     <Card className={classes.card} align="center">
                         <Avatar className={classes.avatar}>
@@ -57,9 +33,9 @@ const Login = () =>{
                                         type='password'
                                     />
                                 </Grid>
-                                <Grid className={classes.gridmb}>
+                                <Grid item xs={12} className={classes.gridmb}>
                                     <Button
-                                        variant='contained'
+                                        variant="contained"
                                         fullWidth
                                         color='primary'
                                     >
@@ -68,7 +44,7 @@ const Login = () =>{
                                 </Grid>
                             </Grid>
                             <Link
-                                href='/'
+                                to='/registrar'
                                 variant="body1"
                                 className={classes.link}
                             >
